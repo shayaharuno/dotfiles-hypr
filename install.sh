@@ -48,20 +48,27 @@ PACKAGES=(
     "mako"
     "hyprshot"
     "hyprpicker"
+    "hyprpolkitagent"
     "swww"
     "wl-clipboard"
-    "polkit-gnome"
     "pipewire"
     "wireplumber"
     "xdg-desktop-portal-hyprland"
     "librewolf-bin"
     "reflector"
+    "protonup-qt-bin"
+    "wttrbar"
+    "qt6ct-kde"
+    "qt5ct-kde"
+    "nwg-look"
+    "breeze"
     "fastfetch"
     "kcalc"
     "kate"
     "ark"
     "dolphin"
     "fish"
+    "visual-studio-code-bin"
     "godot"
     "blender"
     "krita"
@@ -123,6 +130,8 @@ done
 systemctl --user enable --now wireplumber.service
 systemctl --user enable --now pipewire.service
 systemctl --user enable --now pipewire-pulse.service
+systemctl --user enable --now bluetooth.service
+systemctl --user enable --now fstrim.timer
 
 echo "Installation complete!"
 echo "Please log out and log back in to start Hyprland."

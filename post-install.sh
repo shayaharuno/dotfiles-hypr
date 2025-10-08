@@ -15,14 +15,6 @@ if [ "$SHELL" != "/usr/bin/fish" ]; then
     echo "Default shell changed to fish. Will take effect after reboot."
 fi
 
-# Enable Bluetooth service
-echo "Enabling Bluetooth service..."
-sudo systemctl enable --now bluetooth.service
-
-# Enable TRIM timer for SSDs
-echo "Enabling TRIM timer for SSDs..."
-sudo systemctl enable fstrim.timer
-
 # Install Hyprland split-monitor-workspaces plugin
 echo "Installing Hyprland split-monitor-workspaces plugin..."
 if ! hyprpm update; then
@@ -51,6 +43,3 @@ if ! hyprpm update; then
 fi
 
 echo "All post-installation tasks completed successfully!"
-echo "System will reboot in 10 seconds. Press Ctrl+C to cancel."
-sleep 10
-sudo reboot
