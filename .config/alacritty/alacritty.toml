@@ -1,0 +1,159 @@
+[general]
+live_config_reload = true
+
+
+[window]
+decorations = "None"
+dynamic_padding = true
+dynamic_title = false
+opacity = 1.0
+title = "Alacritty"
+
+  [window.class]
+  general = "Alacritty"
+  instance = "Alacritty"
+
+  [window.padding]
+  x = 24
+  y = 10
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+  [colors.primary]
+  background = "#1c1f22"
+  foreground = "#cccccc"
+
+  [colors.normal]
+  black = "#011627"
+  red = "#ef5350"
+  green = "#22da6e"
+  yellow = "#c5e478"
+  blue = "#82aaff"
+  magenta = "#c792ea"
+  cyan = "#21c7a8"
+  white = "#ffffff"
+
+  [colors.bright]
+  black = "#575656"
+  red = "#ef5350"
+  green = "#22da6e"
+  yellow = "#ffeb95"
+  blue = "#82aaff"
+  magenta = "#c792ea"
+  cyan = "#7fdbca"
+  white = "#ffffff"
+
+
+  [colors.selection]
+  background = "#2d4f67"
+  foreground = "#c8c093"
+
+  [[colors.indexed_colors]]
+  index = 16
+  color = "#ffa066"
+
+  [[colors.indexed_colors]]
+  index = 17
+  color = "#ff5d62"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14
+
+  [font.normal]
+  family = "JetBrainsMono Nerd Font"
+  style = "Medium"
+
+  [font.offset]
+  x = 0
+  y = 0
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Plus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "Paste"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "Copy"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ClearLogNotice"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\f"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "PageUp"
+mode = "~Alt"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "PageDown"
+mode = "~Alt"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ScrollToTop"
+key = "Home"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "End"
+mode = "~Alt"
+mods = "Shift"
+
+[scrolling]
+history = 5_000

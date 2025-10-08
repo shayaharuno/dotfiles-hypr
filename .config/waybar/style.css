@@ -1,0 +1,243 @@
+@define-color C_TEXT #3DAEE9;
+@define-color C_TEXT_GRAY #FFFFFF;
+@define-color C_PANEL #000000;
+@define-color C_PANEL_BACKUP #1A1B25;
+@define-color C_URGENT #EF5350;
+
+*{
+    font-family: Sarasa UI J, JetBrainsMono Nerd Font;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 1px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 0px;
+
+}
+
+window#waybar {
+    background: rgba(18, 21, 24, 0.7);
+}
+
+#workspaces button {
+
+    all:unset;
+    padding: 0 4 2 8;
+    color: @C_TEXT_GRAY;
+}
+
+#workspaces button.active {
+    color: @C_TEXT_GRAY;
+}
+
+#workspaces button:hover {
+    color: @C_TEXT;
+    transition: all .1s ease;
+}
+
+#workspaces button.urgent {
+    color:@C_URGENT;
+}
+
+#workspaces {
+    padding: 0 0 0 0;
+}
+
+tooltip {
+    border-radius: 8px;
+    background: rgba(45, 47, 50, 0.8);
+}
+
+tooltip label {
+    color: @C_TEXT_GRAY;
+    font-size: 12;
+    margin: 8 8 8 8;
+}
+
+#custom-tofi {
+    font-size: 18;
+    color: @C_TEXT_GRAY;
+    padding-left: 16;
+    padding-right: 12;
+}
+
+#tray {
+    color: @C_TEXT_GRAY;
+    margin: 0 0 0 0;
+    padding: 0 8 0 8;
+}
+
+#clock {
+    color: @C_TEXT_GRAY;
+    padding: 0 8 0 8;
+}
+
+#custom-power {
+    color: @C_TEXT_GRAY;
+    font-size: 17;
+    padding: 2 3 0 3;
+}
+
+#pulseaudio {
+    color: @C_TEXT_GRAY;
+    padding: 0 8 0 8;
+}
+
+#pulseaudio.microphone {
+    color: @C_TEXT_GRAY;
+    padding: 0 14 0 8;
+}
+
+#backlight {
+    color: @C_TEXT_GRAY;
+    padding: 0 8 0 8;
+}
+
+#battery {
+    color: @C_TEXT_GRAY;
+    padding: 0 8 0 8;
+}
+
+#language {
+    color: @C_TEXT_GRAY;
+    font-weight: 900;
+    font-size: 18;
+    padding: 0 8 1 8;
+}
+
+#bluetooth {
+    font-size: 17;
+    color: @C_TEXT_GRAY;
+    padding: 0 8 0 8;
+}
+
+#network {
+    color: @C_TEXT_GRAY;
+    padding: 0 8 0 8;
+}
+
+#cpu {
+    color: @C_TEXT_GRAY;
+    padding: 0 8 0 8;
+}
+
+#memory {
+    color: @C_TEXT_GRAY;
+    padding: 0 8 0 0;
+}
+
+#mpris {
+    color: @C_TEXT_GRAY;
+    font-size: 12;
+    padding: 0 8 0 8;
+}
+
+#window {
+    color: @C_TEXT_GRAY;
+    font-size: 52;
+    padding: 0 8 0 8;
+}
+
+#window text {
+    font-size: 52;
+}
+
+
+#custom-weather {
+    color: @C_TEXT_GRAY;
+    padding: 0 4 0 8;
+}
+
+#custom-hyprpicker {
+    font-size: 15;
+    padding: 0 4 0 8;
+}
+
+
+
+/*
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#workspaces,
+#tray,
+#backlight,
+#language {
+background: #1E1F28;
+padding: 0px 10px;
+margin: 2px 0px;
+}
+
+#backlight {
+border-radius: 10px 0px 0px 10px;
+}
+
+#tray {
+border-radius: 10px;
+margin-right: 10px;
+}
+
+#workspaces {
+background: #1E1F28;
+border-radius: 10px;
+margin-left: 10px;
+padding-right: 0px;
+padding-left: 5px;
+}
+
+#cpu {
+border-radius: 0px 10px 10px 0px;
+margin-right: 10px;
+}
+
+#memory {
+border-radius: 10px 0px 0px 10px;
+}
+
+#window {
+border-radius: 10px;
+margin-left: 60px;
+margin-right: 60px;
+}
+
+#clock {
+color: #A9A9C0;
+border-radius: 10px 10px 10px 10px;
+margin-left: 5px;
+border-right: 0px;
+}
+
+#language {
+color:  #A9A9C0;
+border-radius: 0px 0px 0px 0px;
+}
+
+#network {
+color:  #A9A9C0;
+border-radius: 10px 0px 0px 10px;
+}
+
+#pulseaudio {
+color: #A9A9C0;
+border-left: 0px;
+border-right: 0px;
+}
+
+#pulseaudio.microphone {
+color: #A9A9C0;
+border-radius: 0px 10px 10px 0px;
+border-left: 0px;
+border-right: 0px;
+margin-right: 5px;
+}
+
+#battery {
+color:#A9A9C0;
+border-radius: 0px 10px 10px 0px;
+margin-right: 10px;
+}*/

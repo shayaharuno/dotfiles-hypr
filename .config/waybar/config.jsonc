@@ -1,0 +1,224 @@
+
+{
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": false,
+    "reload_style_on_change": true,
+    "height": 0,
+    "margin-bottom" : 0,
+    "margin-left" : 0,
+    "margin-right" : 0,
+    "modules-left": [
+        "custom/tofi",
+        "clock",
+        "tray"
+        //"hyprland/window"
+        //"hyprland/workspaces"
+    ],
+    "modules-center": ["hyprland/workspaces"], //"hyprland/window"
+    "modules-right": [
+        "mpris",
+        "custom/weather",
+        "custom/hyprpicker",
+        "bluetooth",
+        "hyprland/language",
+        //"network",
+        //"memory",
+        //"cpu",
+        //"battery",
+        //"backlight",
+        "pulseaudio",
+        "pulseaudio#microphone"
+    ],
+
+
+// ┳┳┓┏┓┳┓┳┳┓ ┏┓┏┓
+// ┃┃┃┃┃┃┃┃┃┃ ┣ ┗┓
+// ┛ ┗┗┛┻┛┗┛┗┛┗┛┗┛
+
+    // "hyprland/window": {
+    //     "format": "󰣇 {}"
+    // },
+
+    "custom/tofi": {
+        "format": "󰣇",
+        "tooltip": false,
+        //"on-click-right": "nwg-drawer",
+        //"on-click": "wofi --show run",
+        "on-click": "pkill tofi-drun || tofi-drun -c ~/.config/tofi/configV --drun-launch=true",
+        //"on-click-right": "pkill -9 tofi-drun"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+        "urgent": "󱇎",
+        "active": "󰜋", // focused workspace on current monitor
+        "visible": "󱓝", // focused workspace on other monitors
+        "default": "󱓝", //has content but not focused
+        "empty": "󰜌" // persistent (created by this plugin)
+        },
+        "all-outputs": false
+    },
+
+    "custom/hyprpicker": {
+        "format": " ",
+        "on-click": "hyprpicker | wl-copy",
+        "tooltip": true,
+        "tooltip-format": "Hyprpicker",
+    },
+
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --location Belgrade",
+        "return-type": "json"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} {dynamic}",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵",
+            "ncspot": "  ",
+            "spotify": "  ",
+            "firefox": "󰈹  "
+        },
+        "status-icons": {
+            "paused": "󰏤 "
+        },
+        "dynamic-order": ["title", "artist"],
+        "artist-len": 20,
+        "title-len": 20,
+        "ignored-players": [""]
+    },
+
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-ru": "󰬈",
+        "format-en": "󰬌",
+        "on-click": "hyprctl switchxkblayout keychron-keychron-k2-he-keyboard next"
+    },
+
+    "tray": {
+        "format": "{}",
+        "icon-size": 16,
+        "spacing": 6,
+    },
+
+    "clock": {
+        "format": "{:%A     󰃭   %B %d    󱑎   %I:%M %p}",
+        "interval": 1,
+        "tooltip" : false,
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-up": "brightnessctl set 10%+",
+        "on-scroll-down": "brightnessctl set 10%-",
+        "tooltip-format": " {icon} {percent}%  ",
+    },
+
+    "battery": {
+        "interval": 2,
+        "states": {
+            "good": 95,
+            "warning": 35,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂅  {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [
+            "󰂎",
+            "󰁻",
+            "󰁾",
+            "󰂀",
+            "󰁹"
+        ],
+    },
+
+    "pulseaudio": {
+        "scroll-step": 10,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "   Muted",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": [" ", " "," ","  "]
+        },
+        "on-click-right": "pavucontrol-qt",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "   Muted",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 10%+",
+        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 10%-",
+        "scroll-step": 10
+    },
+
+    "memory": {
+        "states": {
+            "c": 90, // critical
+            "h": 60, // high
+            "m": 30 // medium
+        },
+        "interval": 10,
+        "format-alt": "󰾆  {used}GB",
+        "format-m": "󰾅  {used}GB",
+        "format-h": "󰓅  {used}GB",
+        "format-c": "  {used}GB",
+        "format": "󰾆  {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": " 󰾆  {percentage}% \n   {used:0.1f}GB/{total:0.1f}GB "
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛  {usage}%",
+        "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
+    "bluetooth": {
+        // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+        "format": "󰂯",
+        "format-disabled": "󰂲", // an empty format will hide the module
+        "tooltip-format": " {controller_alias}\t{controller_address} ",
+        "tooltip-format-connected": " {controller_alias}\t{controller_address}\n\n{device_enumerate} ",
+        "tooltip-format-enumerate-connected": " {device_alias}\t{device_address} ",
+        "on-click": "blueman-manager"
+    },
+
+    "network": {
+        "tooltip": true,
+        "format-wifi": " ",
+        "format-ethernet": "󰈀 ",
+        "tooltip-format": " Network: <b>{essid}</b> \n Signal strength: <b>{signaldBm}dBm ({signalStrength}%)</b> \n Frequency: <b>{frequency}MHz</b> \n Interface: <b>{ifname}</b> \n IP: <b>{ipaddr}/{cidr}</b> \n Gateway: <b>{gwaddr}</b> \n Netmask: <b>{netmask}</b> ",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": "󰖪 ",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-alt": "<span foreground='#99ffdd'>   {bandwidthDownBytes}</span> <span foreground='#ffcc66'>      {bandwidthUpBytes}</span>",
+        "interval": 2
+    },
+
+    "custom/power": {
+        "format": " 󰐥 ",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+}
