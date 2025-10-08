@@ -17,7 +17,7 @@
 }
 
 window#waybar {
-    background: rgba(18, 21, 24, 0.7);
+    background: rgba(0, 0, 0, 1);
 }
 
 #workspaces button {

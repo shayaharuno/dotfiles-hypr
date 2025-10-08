@@ -42,4 +42,4 @@ if ! hyprpm update; then
     exit 1
 fi
 
-echo "All post-installation tasks completed successfully!"
+echo "Done!"
