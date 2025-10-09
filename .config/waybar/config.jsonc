@@ -22,7 +22,7 @@
     "modules-right": [
         "mpris",
         "custom/weather",
-        "custom/hyprpicker",
+        //"custom/hyprpicker",
         "bluetooth",
         "hyprland/language",
         //"network",
