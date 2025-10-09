@@ -1,44 +1,51 @@
 {
-    // Git
+    "editor.fontFamily": "JetBrainsMono Nerd Font, monospace",
+    "editor.fontSize": 17,
+    "editor.fontLigatures": true,
+
+    "debug.console.fontFamily": "JetBrainsMono Nerd Font, monospace",
+    "debug.console.fontSize": 15,
+
+    "window.zoomLevel": 1,
+    "window.customTitleBarVisibility": "windowed",
+    "window.titleBarStyle": "custom",
+    "window.commandCenter": false,
+
+    "editor.minimap.enabled": true,
+    //"editor.rulers": [100, 120],
+    "editor.scrollbar.verticalScrollbarSize": 4,
+    "editor.scrollbar.horizontalScrollbarSize": 4,
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.horizontal": "visible",
+    "editor.accessibilitySupport": "off",
+    "editor.tabSize": 4,
+    "editor.mouseWheelScrollSensitivity": 2,
+    "editor.fontWeight": "normal",
+    "editor.fontVariations": true,
+    "editor.cursorSmoothCaretAnimation": "off",
+    "editor.cursorBlinking": "blink",
+    "editor.folding": true,
+
+    "explorer.decorations.colors": true,
+    "explorer.decorations.badges": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    
+    "debug.openDebug": "neverOpen",
+
+    "extensions.ignoreRecommendations": true,
+    
+    "workbench.iconTheme": "file-icons",
+    "workbench.preferredDarkColorTheme": "Kanagawa Wave",
+    "workbench.navigationControl.enabled": false,
+    "workbench.preferredLightColorTheme": "Kanagawa Wave",
+
     "git.openRepositoryInParentFolders": "never",
     "git.autofetch": true,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.blame.editorDecoration.enabled": false,
 
-
-    // Editor & Explorer
-    "window.zoomLevel": 1,
-    "workbench.activityBar.location": "top",
-    "workbench.iconTheme": "file-icons",
-    "debug.console.fontFamily": "JetBrainsMono Nerd Font, monospace",
-    "debug.console.fontSize": 15,
-    "editor.fontFamily": "JetBrainsMono Nerd Font, monospace",
-    "editor.fontSize": 17,
-    "editor.minimap.enabled": false,
-    "editor.scrollbar.horizontal": "visible",
-    //"editor.scrollbar.vertical": "hidden",
-    //"editor.scrollbar.verticalScrollbarSize": 0,
-    "explorer.decorations.colors": true,
-    "explorer.decorations.badges": true,
-    "editor.scrollbar.verticalScrollbarSize": 4,
-    "debug.openDebug": "neverOpen",
-    "editor.fontWeight": "normal",
-    "editor.fontVariations": true,
-    "editor.fontLigatures": true,
-    //"editor.rulers": [92, 120],
-    "editor.cursorSmoothCaretAnimation": "off",
-    "editor.folding": true,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "extensions.ignoreRecommendations": true,
-    "window.customTitleBarVisibility": "windowed",
-    "telemetry.telemetryLevel": "off",
-    "editor.cursorBlinking": "blink",
-    "vim.highlightedyank.enable": true,
-
-
-    // Exclude and Nesting
     "files.exclude": {
         ".godot": true,
         ".vscode": true,
@@ -46,52 +53,29 @@
         "**/*.blend1": true,
         "**/*.aseprite": true,
         "**/*.ase": true,
+        "**/*.translation": true,
     },
+
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": false,
     "explorer.fileNesting.patterns": {
         "*.gd": "${capture}.tscn, ${capture}.gd.uid, ${capture}.gdshader, ${capture}.gdshader.uid, ${capture}.blend, ${capture}.tres, ${capture}.png",
         "*.gdshader": "${capture}.gdshader.uid",
-        "*.tscn": "${capture}.png, ${capture}.blend, ${capture}.gdshader, ${capture}.gdshader.uid, ${capture}.tres,",
+        "*.tscn": "${capture}.png, ${capture}.blend, ${capture}.gdshader, ${capture}.gdshader.uid, ${capture}.tres,"
     },
 
-
-    // Godot Setup
     "godotTools.editorPath.godot4": "/usr/bin/godot",
     "godotTools.inlayHints.gdscript": true,
     "godotTools.scenePreview.previewRelatedScenes": "anyFolder",
     "godotTools.documentation.pageScale": 200,
 
-
-    // Copilot
-    "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "chat.commandCenter.enabled": false,
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false,
-        "gdscript": false,
-        "jsonc": true
-    },
-
-
-    // Theme Setup
     "window.autoDetectColorScheme": true,
-
-
-    // Theme Specific Overrides
     "workbench.colorCustomizations": {
-        "[Kanagawa]": {
-            // Editor Settings
+        "[Kanagawa Wave]": {
             "editor.lineHighlightBackground": "#252735",
             "editor.background": "#1A1B25",
-
-            // Primary Code Tabs
             "editorGroupHeader.tabsBorder": "#2D2D3A",
             "editorGroupHeader.tabsBackground": "#1A1B25",
-            //"editorGroupHeader.border": "#2D2D3A",
             "tab.activeBackground": "#2D2D3A",
             "tab.unfocusedInactiveBackground": "#2D2D3A",
             "tab.selectedBackground": "#2D2D3A",
@@ -100,10 +84,6 @@
             "tab.unfocusedActiveBackground": "#2D2D3A",
             "tab.unfocusedHoverBackground": "#2D2D3A",
             "editorRuler.foreground": "#2D2D3A",
-            //"tab.unfocusedInactiveBackground": "#001aff",
-            //"tab.activeBorderTop": "#ff0000",
-
-            // Bottom Header Panel
             "terminal.background": "#1A1B25",
             "panel.border": "#2D2D3A",
             "panelTitle.activeBorder": "#4F4F82",
@@ -112,9 +92,6 @@
             "statusBar.background": "#1A1B25",
             "statusBar.border": "#2D2D3A",
             "statusBar.debuggingBackground": "#4F4F82",
-            //"panel.background": "#ff0000",
-
-            // Side Bars
             "sideBar.background": "#1A1B25",
             "sideBar.border": "#2D2D3A",
             "sideBar.foreground": "#e2e2e2",
@@ -122,33 +99,23 @@
             "list.activeSelectionBackground": "#2D2D3A",
             "list.inactiveSelectionForeground": "#E6C283",
             "list.inactiveSelectionBackground": "#2D2D3A",
-
-            // Title Bar
             "titleBar.activeBackground": "#1A1B25",
             "titleBar.inactiveBackground": "#17171F",
             "titleBar.border": "#2D2D3A",
             "titleBar.activeForeground": "#FFFFFF",
             "titleBar.inactiveForeground": "#FFFFFF",
-
-            // Documentation Background
-            "editorHoverWidget.background": "#17171f",
+            "editorHoverWidget.background": "#17171f"
         },
-
-        
-        "[Kanagawa Wave]": { //BREEZE
+        // Gray theme to override
+        "[Kanagawa]": {
             "quickInput.background": "#373b40",
             "quickInput.foreground": "#e2e2e2",
-
-            // Editor Settings
             "editor.lineHighlightBackground": "#31363B",
             "editor.background": "#292C30",
-            "editorWarning.background": "#342a2c",
+            "editorWarning.background": "#342a2cBB",
             "notifications.background": "#292C30",
-            
-            // Primary Code Tabs
             "editorGroupHeader.tabsBorder": "#292C30",
             "editorGroupHeader.tabsBackground": "#292C30",
-            //"editorGroupHeader.border": "#2D2D3A",
             "tab.activeBackground": "#31363B",
             "tab.unfocusedInactiveBackground": "#222222",
             "tab.hoverBackground": "#31363B",
@@ -160,21 +127,18 @@
             "editorIndentGuide.background1": "#26292b",
             "editorIndentGuide.activeBackground1": "#373b40",
             "editorStickyScroll.background": "#292C30",
-            "editorStickyScroll.border" : "#292C30",
+            "editorStickyScroll.border": "#292C30",
             "editorStickyScroll.shadow": "#33363a",
-            //"editorRuler.foreground": "#292C30",
             "tab.activeBorderTop": "#3DAEE9",
             "tab.activeBorder": "#292C30",
-            "tab.unfocusedActiveBorderTop" : "#31363B",
+            "tab.unfocusedActiveBorderTop": "#31363B",
             "tab.border": "#292C30",
             "tab.unfocusedActiveBorder": "#31363B",
-
-            // Bottom Header Panel
             "dropdown.background": "#292C30",
             "dropdown.foreground": "#7e7d70",
-            "dropdown.border" : "#202326",
+            "dropdown.border": "#202326",
             "input.background": "#292C30",
-            "input.border" : "#202326",
+            "input.border": "#202326",
             "terminal.background": "#292C30",
             "panel.border": "#31363B",
             "panelTitle.activeBorder": "#292C30",
@@ -184,10 +148,6 @@
             "statusBar.border": "#292C30",
             "statusBar.debuggingBackground": "#292C30",
             "panel.background": "#292C30",
-            
-
-            // Side Bars
-            
             "sideBar.background": "#292C30",
             "sideBar.border": "#31363B",
             "sideBar.foreground": "#e2e2e2",
@@ -198,27 +158,22 @@
             "list.activeSelectionBackground": "#455965",
             "list.inactiveSelectionForeground": "#E6C283",
             "list.inactiveSelectionBackground": "#31363B",
-
-            // Title Bar
             "titleBar.activeBackground": "#292C30",
             "titleBar.inactiveBackground": "#292C30",
             "titleBar.border": "#292C30",
             "titleBar.activeForeground": "#e2e2e2",
             "titleBar.inactiveForeground": "#e2e2e2",
-
-            // Documentation Background
             "editorHoverWidget.background": "#292C30",
             "editorWidget.background": "#31363B",
             "editorWidget.foreground": "#ffffff",
             "editorWidget.border": "#31363B",
             "editorWidget.resizeBorder": "#31363B",
-
             "menu.background": "#292C30",
             "menu.foreground": "#e2e2e2",
             "menu.selectionBackground": "#31363B",
             "menu.selectionForeground": "#e2e2e2",
             "menu.border": "#31363B",
-            "menu.separatorBackground": "#31363B",
+            "menu.separatorBackground": "#31363B"
         }
     },
     "editor.tokenColorCustomizations": {
@@ -240,18 +195,26 @@
                     "settings": {
                         "foreground": "#957fb8"
                     }
-                },
+                }
             ]
         }
     },
-    "editor.accessibilitySupport": "off",
-    "editor.tabSize": 4,
-    "editor.mouseWheelScrollSensitivity": 2,
-    "window.titleBarStyle": "custom",
-    "workbench.preferredDarkColorTheme": "Kanagawa Wave",
-    "workbench.navigationControl.enabled": false,
-    "window.commandCenter": false,
-    "window.menuBarVisibility": "compact",
-    "workbench.layoutControl.enabled": false,
-
+    "telemetry.telemetryLevel": "off",
+    "vim.highlightedyank.enable": true,
+    "cursor.cpp.disabledLanguages": [
+        "scminput",
+    ],
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.commandCenter.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "gdscript": false,
+        "jsonc": false
+    },
+    "workbench.activityBar.location": "top",
 }

@@ -1,12 +1,15 @@
-// Place your key bindings in this file to override the defaults
 [
     {
         "key": "shift+f6",
         "command": "-workbench.action.focusPreviousPart"
     },
     {
-        "key": "ctrl+shift+q",
+        "key": "ctrl+shift+c",
         "command": "godotTools.debugger.debugCurrentFile"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.action.debug.start"
     },
     {
         "key": "ctrl+q",
